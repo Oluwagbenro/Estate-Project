@@ -1,0 +1,49 @@
+.estate{
+    background-color: #fff;
+    padding: 2rem;
+
+    grid-column: full-start/full-end;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+    grid-gap: 5rem;
+}
+
+.estate__all{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: min-content repeat(3, 1fr);
+    grid-row-gap: 1.2rem;
+    grid-column-gap: 2rem;
+    padding-top: 3rem;
+
+}
+
+.building__image{
+    grid-column: 1/-1;
+    grid-row: 1/2;
+    width: 100%;
+    object-fit: cover;
+    transition: all .2s;
+}
+.building__image:hover{
+    transform: translateY(-3px) scale(1.05);
+}
+
+.description--estate{
+    grid-column: 1/2;
+    grid-row: 2/3;
+}
+
+.building--H3{
+    grid-column: 1/-1;
+    grid-row: 3/4;
+    font-weight: 100;
+    font-size: 2rem;
+}
+.estate__location{
+    grid-column: 1/2;
+    grid-row: 4/5;
+    font-weight: 100;
+    font-size: 1rem;
+    display: flex;
+}

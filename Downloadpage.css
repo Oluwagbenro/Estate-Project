@@ -1,0 +1,38 @@
+.download{
+    background-color: var(--color-grey-light-1);
+    color: var(--color-secondary);
+
+    grid-column: full-start/full-end;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+    padding: 3rem 2rem 0 2rem;
+    grid-gap: 3rem;
+}
+
+.download__text{
+    align-self: center;
+    padding-left: 2rem;
+
+}
+
+.download__phone{
+    display: grid;
+}
+
+.download__paragraph{
+    padding-top: 4rem;
+
+}
+
+.app-android--img{
+    padding-top: 4rem;
+    width: 40%;
+    justify-self: center;
+    cursor: pointer;
+}
+
+.phone__img{
+    width: 50%;
+    padding-top: 5rem;
+    justify-self: center;
+}

@@ -1,0 +1,105 @@
+@import url(Apartment.css);
+@import url(Downloadpage.css);
+@import url(Estate.css);
+@import url(footer.css);
+@import url(header.css);
+@import url(typography.css);
+@import url(Testimonial.css);
+
+:root{
+
+    /*====== color variables======= */
+    --color-primary: #fff;
+
+    --color-secondary: #000000;
+
+    --color-grey-light-1: #f9f7f6;
+    --color-grey-light-2: rgb(219, 219, 219);
+    
+    --color-grey-dark-1: #54483A;
+    --color-grey-dark-2: #6D5D4B;
+
+    /*====== font variables======= */
+
+    --font-primary: 'Nunito', sans-serif;
+    --font-display: 'Josefin Sans', sans-serif;
+}
+
+
+/* =======Media Query========= */
+
+/* 75em----1200px
+62.5em----900px
+50em-----600px
+37.5em-----600px below */
+
+*,
+*::before,
+*::after{
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+
+html{
+    font-size: 62.5%;
+    box-sizing: border-box;
+}
+@media only screen and (max-width: 75em) {
+    html{
+        font-size:56.5%;
+    }
+}
+@media only screen and (max-width: 43.75em) {
+    html{
+        font-size:50%;
+    }
+}
+
+body{
+    font-weight: 300;
+    font-family: var(--font-primary);
+    background-color: var(--color-grey-light-2);
+    color: var(--color-primary);
+    padding: 2rem;
+}
+@media only screen and (max-width:62.5em){
+    body{
+        padding: 0rem;
+    }
+}
+
+.container{
+    display: grid;
+    grid-template-rows: 80vh min-content min-content min-content min-content min-content;
+    grid-template-columns: [full-start center-start]repeat(11, [col-start] minmax(min-content, 12rem)[col-end])[center-end full-end];
+}
+
+.btn{
+    background-color: var(--color-secondary);
+    padding: 2rem;
+    color: #fff;
+    cursor: pointer;
+    text-align: center;
+    transition: all .2s;
+}
+.btn:hover{
+    transform: translate(-1px, -3px) ;
+}
+.description{
+    color: var(--color-secondary);
+    display: grid;
+    grid-template-columns: min-content 8rem;
+    align-content: center;
+    grid-column-gap: .2rem;
+    font-size: 1.5rem;
+    font-weight: 300;
+}
+.description::before{
+    content: "";
+    height: .6px;
+    width: 1.5rem;
+    display: block;
+    background-color: red;
+    align-self: center;
+}
